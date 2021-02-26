@@ -32,10 +32,10 @@ class MainActivity : AppCompatActivity() {
                     // Device doesn't support Bluetooth
                     Log.d("applicationContext", "bluetooth Adapter not granted");
                 }
-                var devicesUI = findViewById<android.view.View>(android.r.id."bluetoothDeives");
-
+                var devicesUI = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.bluetoothDevices);
             }
         }
+        
         Log.d("application logs","reached here")
         //onRequestPermissionsResult( code,result, grants );
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -53,10 +53,5 @@ class MainActivity : AppCompatActivity() {
                         1)
             }
         }
-
-
-
     }
-
-
 }
